@@ -1,0 +1,10 @@
+.modal-form {
+    background-color: var(--color-header-bg);
+    color: var(--color-header-text);
+}
+
+.modal-text {
+    font-size: 1.13rem;
+
+    margin-top: 0;
+}

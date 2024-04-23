@@ -1,0 +1,47 @@
+.button {
+    padding: 7.5px 15px;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+
+    font-size: inherit;
+    background-color: var(--color-main);
+    color: #fff;
+
+    cursor: pointer;
+}
+
+.button:hover {
+    background-color: var(--color-btn-hover);
+    transition: 0.3s;
+}
+
+.button-link {
+    padding: 7.5px 15px;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+
+    font-size: 0.75rem;
+    background-color: #14919b;
+    color: #fff;
+
+    cursor: pointer;
+}
+
+.button-link:hover {
+    background-color: var(--color-btn-hover);
+    transition: 0.3s;
+    color: white;
+}
+
+
+@media (prefers-reduced-motion: reduce) {
+    .button:hover {
+        transition: none;
+
+    }
+    .button-link:hover {
+        transition: none;
+    }
+}

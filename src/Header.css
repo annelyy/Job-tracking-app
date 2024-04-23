@@ -1,0 +1,97 @@
+.header {
+    display: grid;
+    grid-template-areas:
+        "header-logo header-title header-dark header-username"
+        "header-nav header-nav header-nav header-nav"
+    ;
+    grid-template-columns: 1fr auto 0.6fr 0.4fr;
+    align-items: center;
+
+    background-color: var(--color-header-bg);
+    color: var(--color-header-text);
+
+    border-bottom: 1.5px solid var(--color-header-edge);
+}
+
+.header__logo {
+    grid-area: header-logo;
+
+    width: 10.5rem;
+    margin-left: 1rem;
+
+    cursor: pointer;
+}
+
+.header__title {
+    grid-area: header-title;
+
+    text-align: center;
+
+    font-size: 1.5rem;
+}
+
+.dark__toggle {
+    grid-area: header-dark;
+
+    cursor: pointer;
+
+    width: 1.2rem;
+
+    justify-self: end;
+}
+
+.header__username {
+    grid-area: header-username;
+
+    width: 9.5rem;
+
+    justify-self: end;
+}
+
+.set-username__toggle {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.job-icon-user {
+    width: 0.9rem;
+}
+
+.user-toggle-label {
+    font-size: 0.75rem;
+}
+
+.job-icon-arrow {
+    width: 0.75rem;
+}
+
+.set-username {
+    position: absolute;
+
+    margin: 1rem 0;
+    padding: 0;
+
+    list-style-type: none;
+
+    z-index: 2;
+}
+
+.set-username--collapsed {
+    display: none;
+}
+
+.header__nav {
+    grid-area: header-nav;
+    grid-column: header-nav-start / header-nav-end;
+}
+
+
+@media (max-width: 50rem) {
+    .header {
+        padding: 1rem;
+    }
+
+    .header__title {
+        display: none;
+    }
+}

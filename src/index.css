@@ -1,0 +1,64 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+
+  background-color: var(--color-page-bg);
+  color: var(--color-page-text);
+
+  font-family: sans-serif;
+  line-height: 1.6;
+}
+
+.skip-to-content-link {
+  background: #e77e23;
+
+  height: 30px;
+  padding: 8px;
+
+  position: fixed;
+  left: -200px; 
+  transition: left 0.3s;
+  transform: translateY(-50%);
+}
+
+.skip-to-content-link:focus {
+  left: 0;  
+}
+
+:root {
+  --color-page-bg: #f8fafc;
+  --color-page-text: black;
+  --color-header-bg: #fff;
+  --color-header-text: #475569;
+  --color-main: #2cb1bc;
+  --color-btn-hover: #0e7c86;
+  --color-footer-text: #94a3b8;
+  --color-header-edge: #e2e8f0;
+  --color-menu-job: #64748b;
+  --color-shadow1: rgba(0, 0, 0, 0.1);
+  --color-shadow2: rgba(0, 0, 0, 0.06);
+}
+
+input, select, textarea {
+  font: inherit;
+}
+
+.dark-theme {
+  --color-page-bg: #333;
+  --color-header-bg: #3f3f3f;
+  --color-header-text: #f0f0f0;
+  --color-header-edge: #1e293b;
+  --color-menu-job: #cbd5e1;
+  --color-shadow1: rgba(255, 255, 255, 0.1);
+  --color-shadow2: rgba(255, 255, 255, 0.06);
+}
+
+
+@media (prefers-reduced-motion: reduce) {
+  .skip-to-content-link {
+    transition: none;
+  }
+}

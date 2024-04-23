@@ -1,0 +1,27 @@
+.job-indicator {
+    display: none;
+
+    margin: 0;
+
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--color-header-text);
+}
+
+.show-message {
+    display: block;
+}
+
+.show-error {
+    display: block;
+}
+
+.job-indicator {
+    margin-top: 1rem;
+}
+
+@media (min-width: 50rem) {
+    .job-indicator {
+        margin-top: 0;
+    }
+}

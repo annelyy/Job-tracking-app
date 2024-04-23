@@ -1,0 +1,148 @@
+/* Overview Info */
+.overview__title {
+  font-size: 3rem;
+
+  margin-bottom: 0rem;
+  margin-top: 1.5rem;
+}
+
+.overview__title span {
+  color: var(--color-main);
+}
+
+.overview__subtitle {
+  margin-top: 0;
+
+  color: var(--color-header-text);
+  font-size: 0.9rem;
+}
+
+.overview__subtitle span {
+  color: var(--color-main);
+}
+
+.overview__block {
+  display: grid;
+  place-items: center;
+
+  margin: 0 3.75rem 3.75rem 3.75rem;
+}
+
+.overview__text {
+  line-height: 1.5rem;
+
+  font-size: 0.83rem;
+  color: var(--color-menu-job);
+
+  margin: 0;
+}
+
+/* Carousel */
+.slider-container {
+  background: linear-gradient(149deg,
+      white 0%,
+      #2cb1bc 100%);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  height: 100%;
+}
+
+.slider {
+  width: 100%;
+  max-width: 56rem;
+
+  margin: 1.5rem;
+  border-radius: 20px;
+
+  text-align: center;
+
+  overflow: hidden;
+
+  position: relative;
+}
+
+.slide__prev {
+  cursor: pointer;
+}
+
+.slide__next {
+  cursor: pointer;
+}
+
+a.slide__prev,
+.slider::before {
+  transform: rotate(135deg);
+  -webkit-transform: rotate(135deg);
+  left: 5%;
+}
+
+a.slide__next,
+.slider::after {
+  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+  right: 5%;
+}
+
+.slider::before,
+.slider::after,
+.slide__prev,
+.slide__next {
+  position: absolute;
+  top: 48%;
+
+  width: 1.6rem;
+  height: 1.6rem;
+
+  border: solid #475569;
+  border-width: 0 4px 4px 0;
+  padding: 3px;
+  box-sizing: border-box;
+}
+
+.slider::before,
+.slider::after {
+  content: "";
+  z-index: 1;
+  background: none;
+  pointer-events: none;
+}
+
+.slider__nav {
+  box-sizing: border-box;
+  position: absolute;
+
+  bottom: 5%;
+  left: 50%;
+  width: 200px;
+
+  margin-left: -100px;
+
+  text-align: center;
+}
+
+.slider__navlink {
+  display: inline-block;
+
+  height: 15px;
+  width: 15px;
+
+  border-radius: 50%;
+  background-color: #475569;
+  margin: 0 0.5rem 0 0.5rem;
+
+  cursor: pointer;
+}
+
+.slide__img {
+  width: 100%;
+  height: 17rem;
+
+  display: none;
+}
+
+.slide__img.active {
+  display: block;
+}
